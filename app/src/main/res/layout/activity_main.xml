@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    android:padding="16dp">
+
+    <!-- Timer Display -->
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00:000"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
+
+    <!-- Buttons Container -->
+    <LinearLayout
+        android:id="@+id/buttonsContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/timerTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp">
+
+        <!-- Start Button -->
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:layout_margin="8dp" />
+
+        <!-- Pause Button -->
+        <Button
+            android:id="@+id/pauseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pause"
+            android:backgroundTint="#F44336"
+            android:textColor="#FFFFFF"
+            android:layout_margin="8dp"
+            android:enabled="false" />
+
+        <!-- Reset Button -->
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:backgroundTint="#FFC107"
+            android:textColor="#FFFFFF"
+            android:layout_margin="8dp"
+            android:enabled="false" />
+
+        <!-- Lap Button -->
+        <Button
+            android:id="@+id/lapButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LAP"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF"
+            android:layout_margin="8dp"
+            android:enabled="false" />
+    </LinearLayout>
+
+    <!-- Laps List -->
+    <TextView
+        android:id="@+id/lapHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Laps:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/buttonsContainer"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="8dp" />
+
+    <ScrollView
+        android:id="@+id/lapScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lapHeader"
+        android:layout_marginTop="10dp"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:id="@+id/lapContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+</RelativeLayout>
